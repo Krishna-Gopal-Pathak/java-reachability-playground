@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'termurin'
+          distribution: 'adopt'
           cache: maven
       - name: Build with maven cloud
         run: mvn -B verify sonar:sonar -Dsonar.projectKey=javareachabilityprojects -Dsonar.organization=javareachabilityprojects -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN  
