@@ -17,7 +17,7 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: Build with maven cloud
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=javareachabilityprojects -Dsonar.organization=javareachabilityprojects -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN  
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=javaprojectreachabilitycode -Dsonar.organization=javaprojectreachabilitycode -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN  
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
